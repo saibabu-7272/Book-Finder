@@ -1,8 +1,8 @@
 # Book Finder
 
-A modern, sleek web application designed for Alex (a college student) to search and discover books using the Open Library API. The application features a liquid glass UI with gradient blur backgrounds and provides comprehensive book search functionality.
+A modern, web application designed to search and discover books using the Open Library API. Provides comprehensive book search functionality.
 
-![Book Finder App](https://via.placeholder.com/800x400?text=Book+Finder+App)
+![Book Finder App Live](https://book-finder-topaz.vercel.app/)
 
 ## Features
 
@@ -32,7 +32,7 @@ Before setting up the project, ensure you have the following installed:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/book-finder.git
+git clone https://github.com/saibabu-7272/Book-Finder.git
 cd book-finder
 ```
 
