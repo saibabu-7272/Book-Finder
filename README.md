@@ -2,7 +2,7 @@
 
 A modern, web application designed to search and discover books using the Open Library API. Provides comprehensive book search functionality.
 
-![Book Finder App Live](https://book-finder-topaz.vercel.app/)
+[Book Finder App Live](https://book-finder-topaz.vercel.app/)
 
 ## Features
 
