@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Book Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, sleek web application designed for Alex (a college student) to search and discover books using the Open Library API. The application features a liquid glass UI with gradient blur backgrounds and provides comprehensive book search functionality.
 
-## Available Scripts
+![Book Finder App](https://via.placeholder.com/800x400?text=Book+Finder+App)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Modern UI**: Sleek design with liquid glass cards and gradient blur backgrounds
+- **Advanced Search**: Search books by title, author, or subject
+- **Sorting Options**: Sort results by relevance, newest, oldest, or rating
+- **Pagination**: Browse through multiple pages of search results
+- **Book Details**: View comprehensive book information including covers, authors, publish year, editions, and subjects
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 19.1.1
+- JavaScript (ES6+)
+- CSS3 (with modern features like backdrop-filter for glass effects)
+- Open Library API
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before setting up the project, ensure you have the following installed:
 
-### `npm run build`
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher) or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/yourusername/book-finder.git
+cd book-finder
+```
 
-### `npm run eject`
+### Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Using npm:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Or using yarn:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+yarn install
+```
 
-## Learn More
+### Start the Development Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Using npm:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+Or using yarn:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+yarn start
+```
 
-### Analyzing the Bundle Size
+This will launch the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How to Use the App
 
-### Making a Progressive Web App
+### Searching for Books
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Enter your search query in the search bar at the top of the page
+2. Select the search type (Title, Author, Subject, or All) from the dropdown menu
+3. Choose a sorting method (Relevance, Newest, Oldest, Rating) if desired
+4. Click the search button or press Enter
 
-### Advanced Configuration
+### Browsing Results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Search results will appear as cards below the search bar
+- Each card displays:
+  - Book cover image (when available)
+  - Title
+  - Author(s)
+  - Publication year
+  - Number of editions
+  - Languages
+  - Subjects (up to 3)
 
-### Deployment
+### Pagination
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Navigate between pages using the pagination controls at the bottom of the results
+- The current page and total pages are displayed for easy navigation
 
-### `npm run build` fails to minify
+## API Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This application uses the Open Library Search API:
+- Base endpoint: `https://openlibrary.org/search.json`
+- Example query: `https://openlibrary.org/search.json?title={bookTitle}`
+
+For more information about the API, visit the [Open Library Developer Center](https://openlibrary.org/developers/api).
+
+## Building for Production
+
+To build the app for production:
+
+```bash
+npm run build
+```
+
+Or using yarn:
+
+```bash
+yarn build
+```
+
+This creates a `build` folder with optimized production files ready for deployment.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [Open Library](https://openlibrary.org/) for providing the book data API
+- [Create React App](https://create-react-app.dev/) for the project setup

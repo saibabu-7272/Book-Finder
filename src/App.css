@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  color: white;
+  background: #0f0c29;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+/* Background styling */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.gradient-bg::before, .gradient-bg::after {
+  content: '';
+  position: absolute;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: pulse 10s infinite alternate;
+}
+
+.gradient-bg::before {
+  top: -40vh;
+  left: -40vh;
+  background: radial-gradient(circle, rgba(71, 118, 230, 0.8), rgba(142, 84, 233, 0.4));
+  animation-delay: 0s;
+}
+
+.gradient-bg::after {
+  bottom: -40vh;
+  right: -40vh;
+  background: radial-gradient(circle, rgba(142, 84, 233, 0.8), rgba(71, 118, 230, 0.4));
+  animation-delay: -5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8) translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1.2) translateY(-30px);
+  }
+}
+
+/* Main content styling */
+.main-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 120px auto 50px;
+  flex-grow: 1;
+}
+
+/* Search results */
+.search-results {
+  margin-top: 40px;
+}
+
+.results-info {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  margin: 80px auto;
+  padding: 40px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.no-results p {
+  margin: 10px 0;
+}
+
+.no-results p:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Error message */
+.error-message {
+  background: rgba(220, 53, 69, 0.1);
+  color: #ff8a8a;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-content {
+    width: 95%;
   }
 }
